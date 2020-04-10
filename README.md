@@ -1,5 +1,6 @@
 # NTI_Power_Codecomments
 Итоговый отчет
+```python
 #аналогично импортируем все, что нам понадобится
 # -*- coding: utf-8 -*-
 import rospy
