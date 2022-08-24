@@ -120,14 +120,12 @@ from pyzbar import pyzbar
 import time
 from clever import srv
 from std_srvs.srv import Trigger
-#так же регистрируемся в ROS и сообщаем, что мы нода
 rospy.init_node('flight')
 get_telemetry = rospy.ServiceProxy('get_telemetry', srv.GetTelemetry)
 navigate = rospy.ServiceProxy('navigate', srv.Navigate)
 land = rospy.ServiceProxy('land', Trigger)
 bridge = CvBridge()
 color_yellow = (0, 255, 255)
-#Указываем куда будем публиковать изображения, в нашем случае /flight/imageQR
 image_pub = rospy.Publisher('~imageQR', Image, queue_size=1)
 
 
